@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy 3 Months Anniversary Cot💖</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      text-align: center;
+      padding: 30px 15px;
+      background: linear-gradient(180deg, #d7a8bb, #fff);
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      display: none;
+    }
+
+    .question.active {
+      display: block;
+    }
+
+    h2 {
+      color: #e63973;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 10px auto;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 12px;
+      background: #ff5a8f;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    button:hover {
+      background: #e63973;
+      transform: scale(1.03);
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    .message {
+      color: red;
+      margin-top: 10px;
+      font-size: 0.95rem;
+      min-height: 20px;
+    }
+
+    @media (min-width: 768px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.5rem; }
+      button { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <h1>💕 Q&A 💕</h1>
+  <p>To make sure you are my cotton</p>
+
+  <!-- Q1 -->
+  <div class="question active" id="q1">
+    <h2>When is my birthday?</h2>
+    <button onclick="checkAnswer(1, 'wrong')">4.15</button>
+    <button onclick="checkAnswer(1, 'correct')">4.16</button>
+    <button onclick="checkAnswer(1, 'wrong')">5.16</button>
+    <div class="message" id="msg1"></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question" id="q2">
+    <h2>Where was the place where we first met?</h2>
+    <button onclick="checkAnswer(2, 'wrong')">YanKin House</button>
+    <button onclick="checkAnswer(2, 'correct')">Platfome Cafe</button>
+    <button onclick="checkAnswer(2, 'wrong')">Junction Square</button>
+    <div class="message" id="msg2"></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question" id="q3">
+    <h2>Where was our first photobooth taken together?</h2>
+    <button onclick="checkAnswer(3, 'correct')">Myanmar Plaza</button>
+    <button onclick="checkAnswer(3, 'wrong')">Juction Square</button>
+    <button onclick="checkAnswer(3, 'wrong')">Junction City</button>
+    <div class="message" id="msg3"></div>
+  </div>
+
+  <script>
+    function checkAnswer(q, result) {
+      const msg = document.getElementById('msg' + q);
+      if (result === 'correct') {
+        msg.textContent = '✅ Correct answer!';
+        setTimeout(() => {
+          document.getElementById('q' + q).classList.remove('active');
+          if (document.getElementById('q' + (q+1))) {
+            document.getElementById('q' + (q+1)).classList.add('active');
+          } else {
+            window.location.href = 'asking.html';
+          }
+        }, 800);
+      } else {
+        msg.textContent = '❌ Think about it again~';
+      }
+    }
+  </script>
+</body>
+</html>

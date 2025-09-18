@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffe4ec, #ffffff);
+    }
+    .login-box {
+      width: 90%;
+      max-width: 350px;
+      padding: 40px 30px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .login-box h2 {
+      margin-bottom: 20px;
+      color: #ff6fa5;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+    }
+    .login-box input:focus {
+      border-color: #ff6fa5;
+      box-shadow: 0 0 5px rgba(255,111,165,0.5);
+    }
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background: #ff6fa5;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .login-box button:hover {
+      background: #ff4d88;
+    }
+    .login-box p {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+    .login-box a {
+      color: #ff6fa5;
+      text-decoration: none;
+    }
+    .login-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form onsubmit="return login(event)">
+      <input type="text" id="username" placeholder="username" required>
+      <input type="password" id="password" placeholder="password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function login(event) {
+      event.preventDefault(); 
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (username === "cotton" && password === "3152006") {
+        window.location.href = "questions.html"; 
+      } else {
+        alert("Wrong Password or Username!!!");
+      }
+    }
+  </script>
+</body>
+</html>

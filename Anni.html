@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy 3 Months Anniversary Cot💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #ffdee9 0%, #b5fffc 100%);
+      overflow-x: hidden;
+      color: #333;
+    }
+
+    .hearts-wrap {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      color: #ff5a8f;
+      opacity: 0.9;
+      animation: fall linear forwards;
+    }
+    .heart::before, .heart::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background: currentColor;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+    }
+    .heart::after { left: 50%; }
+    .heart i {
+      position: absolute;
+      width: 70%;
+      height: 70%;
+      background: currentColor;
+      transform: rotate(-45deg);
+      bottom: 0;
+      left: 15%;
+      border-radius: 6px;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10vh) scale(0.7); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(110vh) scale(1); opacity: 0; }
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #e63973;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      font-weight: 400;
+      color: #555;
+    }
+
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .photos img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photos img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+
+    .last-two {
+      display: flex;
+      justify-content: center;  
+      gap: 20px;               
+      grid-column: 1 / -1;      
+    }
+    .last-two img {
+      width: 250px;             
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .ending {
+      font-size: 1.2rem;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.7);
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .card-box {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .surprise-btn {
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 25px;
+      background: #ff5a8f;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-bottom: 15px;
+    }
+    .surprise-btn:hover { background: #e63973; }
+
+    #hiddenMsg {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #e63973;
+      font-weight: 600;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    #hiddenMsg.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .locked-btn {
+      background:#ccc;
+      color:white;
+      font-size:1.1rem;
+      padding:12px 28px;
+      border:none;
+      border-radius:12px;
+      cursor:not-allowed;
+      box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .reflection-btn {
+      text-decoration:none;
+      background:#ff5a8f;
+      color:white;
+      font-size:1.1rem;
+      padding:12px 24px;
+      border-radius:12px;
+      transition:background 0.3s ease;
+    }
+    .reflection-btn:hover { background:#e63973; }
+  </style>
+</head>
+<body>
+  <div class="hearts-wrap" id="hearts-wrap"></div>
+
+  <div class="content">
+    <h1>Happy 3 Months Anniversary Cot💖</h1>
+    <h2>Hope you like it</h2>
+
+    <div class="photos">
+        <div>
+          <img src="/phonto/FullSizeRender.jpeg" alt="First met">
+          <p>The Best Photo Ever!!</p>
+        </div>
+        <div>
+          <img src="/phonto/IMG_5274.jpeg" alt="First Date">
+          <p>This was our first date and I will always remember it.</p>
+        </div>
+        <div>
+          <img src="/phonto/FE3A4885-7DDA-4DDE-B2D5-962B9B43FF9E_1_105_c.jpeg" alt="Together">
+          <p>That day, we decided to be together.</p>
+        </div>
+        <div>
+          <img src="/phonto/FC74CAD5-9510-4EDC-9007-2F40CE701E2B_1_105_c.jpeg" alt="First Rizz">
+          <p>Remember? This was your first time rizzing me</p>
+        </div>
+        <div>
+          <img src="/phonto/26A71CB2-75B8-4F11-90E3-B631B800407F.jpg" alt="Support">
+          <p>This helped me a lot when I was having a hard time.</p>
+        </div>
+        <div>
+          <img src="/phonto/IMG_5236.jpeg" alt="Fav Photo">
+          <p>AHhhh!! I really like this photo</p>
+        </div>
+        <div>
+          <img src="/phonto/23AFE900-1E04-4261-9E31-E976974D5F3F_1_105_c.jpeg" alt="Cute">
+          <p>Really like it!!</p>
+        </div>
+        <div>
+          <img src="/phonto/11591D37-810D-45AF-B576-8BEE190421A2_1_105_c.jpeg" alt="Cute2">
+          <p>You look sooo cuteeee!!</p>
+        </div>
+        <div>
+          <img src="/phonto/5F99F176-5B5D-4546-9738-9D718180E143_1_105_c.jpeg" alt="Height">
+          <p>Noooo! You higher than me!!</p>
+        </div>
+        <div class="last-two">
+          <div>
+            <img src="/phonto/IMG_6738.JPG" alt="Photobooth">
+            <p>Our first photobooth!!</p>
+          </div>
+          <div>
+            <img src="/phonto/MYAH567SMECBMBL5V7T9.jpg" alt="Couple">
+            <p>Look!! We look soooo cuteee!!!</p>
+          </div>
+        </div>
+      </div>
+
+    <div class="ending">
+      <p>It’s been three months! Our story has just begun, and there are still sweet days to come.❤️ Cot chik lr nig ag kyo srr nay tone pr nor!! Nouk pai ll problem ty pyit lr pa say cot" nk amyal tutu shi chin pr tl! Cot Oakkar ko chik lr dr ko ll lo chin pr tl nor!!💖</p>
+    </div>
+
+    <div class="card-box">
+      <h3 style="color:#e63973; margin-bottom:20px;">💖 Surprises & Messages 💖</h3>
+
+      <button id="revealBtn" class="surprise-btn">Click here to unlock the surprise 💌</button>
+      <p id="hiddenMsg">In the days to come, I want to walk through every spring, summer, autumn and winter with you ❤️</p>
+
+      <p style="font-size:1.1rem; color:#e63973; margin-top:25px; margin-bottom:10px;">
+        Click here to unlock the surprise 🎁
+      </p>
+      <button id="unlockBtn" class="locked-btn">🔒 Locked</button>
+
+      <div style="margin-top:30px;">
+        <a href="reflection.html" class="reflection-btn">☁️ What I want to say...</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const wrap = document.getElementById('hearts-wrap');
+    function random(min,max){return Math.random()*(max-min)+min;}
+    function makeHeart(){
+      const el = document.createElement('span');
+      el.className = 'heart';
+      el.style.left = random(0,100) + 'vw';
+      el.style.animationDuration = random(4,8) + 's';
+      const inner = document.createElement('i');
+      el.appendChild(inner);
+      wrap.appendChild(el);
+      setTimeout(()=>{el.remove();}, 9000);
+    }
+    setInterval(makeHeart, 700);
+
+    document.getElementById('revealBtn').addEventListener('click', () => {
+      document.getElementById('hiddenMsg').classList.add('show');
+    });
+
+    const btn = document.getElementById('unlockBtn');
+    let unlocked = false;
+    btn.addEventListener('click', () => {
+      if (!unlocked) {
+        unlocked = true;
+        btn.textContent = "💖 For the future Countdown 💖";
+        btn.style.background = "#ff5a8f";
+        btn.style.cursor = "pointer";
+      } else {
+        window.location.href = "countdown.html"; 
+      }
+    });
+  </script>
+</body>
+</html>
